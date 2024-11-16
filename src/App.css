@@ -324,6 +324,6 @@ footer p {
   cursor: pointer;
 }
 
-.icon {
+.icon { /* For FontAwesomeIcon */
   color: var(--text-primary);
 }
