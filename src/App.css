@@ -1,0 +1,329 @@
+/**
+ * @file App.css
+ * @author Carl Nicolas Mendoza
+ * @id 301386435
+ * @date 2024-11-15
+ * @description Contains the CSS file for App.jsx
+ * 
+ */
+
+/* Foundation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  scroll-snap-type: mandatory;
+}
+
+:root {
+  font-size: 16px;
+  font-family: sans-serif;
+  --text-primary: #575353;
+  --text-secondary: #6e6161;
+  --text-tertiary: #dddcdc;
+  --bg-primary: #f2f2f2;
+  --bg-secondary: #d2d0ca;
+  --bg-tertiary: #36456b;
+  --bg-main: white;
+  --link-primary: #939393;
+  --link-secondary: #7272a8;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+}
+
+/* Header */
+header {
+  letter-spacing: 0.35rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100vw;
+  background: var(--bg-primary);
+  
+}
+
+header span {
+  padding: 1rem;
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title:hover {
+  color: var(--link-secondary);
+}
+
+.dropdown-trigger {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: var(--link-primary);
+}
+
+.dropdown-trigger:hover {
+  color: var(--link-secondary);
+}
+
+.dropdown-trigger-end {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--link-primary);
+  letter-spacing: 0.35rem;
+}
+
+.dropdown-trigger-end:hover {
+  color: var(--link-secondary);
+}
+
+/* Navigation */
+nav {
+  margin-top: 60px;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, lightgray, white);
+  z-index: 9;
+}
+.nav-link-header {
+  list-style: none;
+  margin: 20px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-link-header::before {
+  content: '';
+  background: var(--link-primary);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+}
+
+.nav-link-header:hover {
+  transform: translate(20px);
+}
+
+.nav-link {
+  list-style: none;
+  padding: 4px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: max-content;
+}
+
+.nav-link:hover {
+  transform: translate(20px);;
+}
+
+.nav-link::after {
+  content: '';
+  background: var(--link-secondary);
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  margin-left: 20px;
+
+}
+
+.nav-link:hover::after {
+  width: 85%;
+  
+}
+
+.nav-item-header {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--link-primary);
+}
+
+
+.nav-item {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--link-primary);
+  margin: 10px;
+  padding: 10px;
+  width: max-content;
+}
+
+.nav-item-header:active {
+  color: var(--link-secondary);
+}
+
+.nav-item:active {
+  color: var(--link-secondary);
+}
+
+.nav-flex {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  vertical-align: text-top;
+  margin: 10px;
+  padding: 1.6%;
+  gap: 0vw;
+}
+
+.milestone {
+  margin: 110px;
+}
+
+/* Main */
+main {
+  display: block;
+  margin-top: 60px; /* this should be the same as header height because it is fixed*/
+  width: 100vw;
+}
+
+/* Home */
+.home {
+  background: #333333;
+  color: var(--text-tertiary);
+}
+
+.home section {
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+}
+.home h1 {
+  margin-bottom: 1.6%;
+  font-weight: normal;
+  width: 100px;
+  font-size: 96px;
+}
+
+.home p {
+  margin-top: 1.6%;
+  font-size: 24px;
+  font-weight: 500;
+  width: 450px;
+}
+
+/* Footer */
+footer {
+  display: block;
+  background-color: var(--bg-primary);
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  width: 100vw;
+}
+
+footer a img {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer p {
+  margin: 1.6rem;
+  font-size: 16px;
+}
+
+/* Forms */
+/* Inputs */
+.block { 
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+
+.form input[type="submit"], input[type="reset"] {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 24px;
+}
+.form input[type="text"], input[type="email"], input[type="number"], input[type="password"], select {
+  margin-top: 1.6%;
+  margin-left: 1.6%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-secondary);
+  font-size: 24px;
+}
+
+.form select {
+  margin-left: 17px;
+  width: 65%;
+  color: var(--text-primary)
+}
+
+.search {
+  margin: 10px;
+  margin-top: 70px;
+  position: fixed;
+  height: 2.5rem;
+  width: 85vw;
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--text-primary);
+  z-index: 11;
+}
+
+.form {
+  background: var(--bg-secondary);
+  width: 35vw;
+  margin: 30px;
+  padding: 30px;
+  margin-right: 60vw;
+}
+
+.form input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
+  margin-left: 15px;
+  padding-top: 20px;
+}
+
+.form fieldset {
+  border: none;
+}
+
+.form legend {
+  color: var(--text-primary);
+  font-size: 24px;
+}
+
+/* Decoration */
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.icon {
+  color: var(--text-primary);
+}
