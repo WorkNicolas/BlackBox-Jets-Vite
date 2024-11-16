@@ -13,6 +13,7 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelopesBulk } from '@fortawesome/free-solid-svg-icons';
 
+
 const RequestInformation = () => {
     const [formData, setFormData] = useState({
         firstName: '',
