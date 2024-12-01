@@ -1,6 +1,7 @@
 //React
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import apiClient from '../../apiClient';
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -27,11 +28,24 @@ const Register = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        navigate('/');
+    
+        try {
+            // Send data to the backend
+            const response = await apiClient.post('/register', formData);
+            console.log('Backend response:', response.data);
+    
+            // Navigate to the homepage or another page on success
+            navigate('/'); // Adjust route as needed
+        } catch (error) {
+            console.error('Error during registration:', error);
+        }
     };
+    
+
+
     return (
         <div className="form">
             <form onSubmit={handleSubmit}>

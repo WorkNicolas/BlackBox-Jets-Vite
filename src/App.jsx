@@ -31,6 +31,8 @@ import Lease from './components/main/Lease.jsx'
 import Pricing from './components/main/Pricing.jsx'
 import Sustainability from './components/main/Sustainability.jsx'
 import RequestInformation from './components/forms/RequestInformation.jsx'
+import AboutUs from './components/main/AboutUs.jsx'
+
 
 function App() {
   return (
@@ -56,6 +58,8 @@ function App() {
                 <Route path="/lease" element={<Lease />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/sustainability" element={<Sustainability />} />
+                <Route path="/aboutus" element={<AboutUs />} />
+
             </Routes>
             <RequestInformation />
         <Footer />
